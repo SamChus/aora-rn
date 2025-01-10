@@ -46,7 +46,9 @@ export default function OnBoardingScreen() {
         Exploration with Aora
       </Text>
       <TouchableOpacity style={styles.button}>
-        <Link href="/posts" style={styles.link}>Continue with Email</Link>
+        <Link href="/(auth)/register" style={styles.link}>
+          Continue with Email
+        </Link>
       </TouchableOpacity>
     </View>
   );
@@ -107,7 +109,6 @@ const styles = StyleSheet.create({
     color: "#161622",
     fontSize: 16,
     fontWeight: 600,
-    lineHeight: 22.4,
     letterSpacing: 0,
     textAlign: "center",
     fontFamily: "Poppins",
