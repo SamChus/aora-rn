@@ -46,7 +46,7 @@ export default function OnBoardingScreen() {
         Exploration with Aora
       </Text>
       <TouchableOpacity style={styles.button}>
-        <Link href="/posts">Posts</Link>
+        <Link href="/posts" style={styles.link}>Continue with Email</Link>
       </TouchableOpacity>
     </View>
   );
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: "white",
-    width: 333,
+    width: 300,
     height: 72,
     fontSize: 30,
     fontWeight: 600,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontFamily: "Poppins",
-},
+  },
   coloredText: {
     color: "#FFA101",
     position: "relative",
@@ -102,5 +102,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 40,
-  }
+  },
+  link: {
+    color: "#161622",
+    fontSize: 16,
+    fontWeight: 600,
+    lineHeight: 22.4,
+    letterSpacing: 0,
+    textAlign: "center",
+    fontFamily: "Poppins",
+  },
 });
