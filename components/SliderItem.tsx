@@ -25,7 +25,10 @@ type Props = {
 };
 
 const { width } = Dimensions.get("screen");
+// const ITEM_WIDTH = width; // Adjust the width to show 3 items
+
 const SliderItem = ({ item, index, scrollX }: Props) => {
+  
   const rnAnimatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -33,7 +36,7 @@ const SliderItem = ({ item, index, scrollX }: Props) => {
           translateX: interpolate(
             scrollX.value,
             [(index - 1) * width, index * width, (index + 1) * width],
-            [-width * 0.25, 0, width * 0.25],
+            [-width * 0.6, 0, width * 0.6],
             Extrapolation.CLAMP
           ),
         },
@@ -41,7 +44,7 @@ const SliderItem = ({ item, index, scrollX }: Props) => {
           scale: interpolate(
             scrollX.value,
             [(index - 1) * width, index * width, (index + 1) * width],
-            [0.9, 1, 0.9],
+            [0.8, 1, 0.8],
             Extrapolation.CLAMP
           ),
         },
@@ -73,21 +76,20 @@ const styles = StyleSheet.create({
   itemContainer: {
     justifyContent: "center",
     alignItems: "center",
-    gap: 20,
+    gap: 10,
     width: width,
-    // width: 250,
   },
   image: {
-    width: 280,
-    height: 500,
-    borderRadius: 20,
+    width: 168,
+    height: 268,
+    borderRadius: 14,
   },
   background: {
     position: "absolute",
-    width: 280,
-    height: 500,
-    padding: 20,
-    borderRadius: 20,
+    width: 168,
+    height: 268,
+    padding: 14,
+    borderRadius: 14,
     justifyContent: "space-between",
   },
 });

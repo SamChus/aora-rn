@@ -57,7 +57,6 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 17,
     justifyContent: "center",
     backgroundColor: "#161622",
   },
@@ -65,7 +64,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "95%",
+    width: "90%",
+    marginHorizontal: 20,
+
     // paddingVertical: 10
   },
   welcomeText: {
@@ -91,13 +92,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "95%",
     height: 58,
     color: "#fff",
     backgroundColor: "#1E1E2D",
     paddingHorizontal: 17,
     borderRadius: 8,
     marginVertical: 20,
+    marginHorizontal: 20,
+    width: "90%",
   },
   input: {
     color: "#fff",
