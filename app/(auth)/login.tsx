@@ -1,9 +1,10 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native'
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 export default function Login() {
+  const router = useRouter();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -18,6 +19,7 @@ export default function Login() {
 
   const handleLogin = () => {
     console.log(data);
+    router.push("/(tabs)/home");
   }
 
   return (

@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     right: "-25%",
   },
   button: {
-    width: 333,
+    width: "95%",
     height: 56,
     borderRadius: 8,
     backgroundColor: "#FFA101",
@@ -112,5 +112,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "center",
     fontFamily: "Poppins",
+    
   },
 });
