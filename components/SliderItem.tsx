@@ -25,7 +25,8 @@ type Props = {
 };
 
 const { width } = Dimensions.get("screen");
-// const ITEM_WIDTH = width; // Adjust the width to show 3 items
+//using width as 375 here, but you use the actual width of the screen
+
 
 const SliderItem = ({ item, index, scrollX }: Props) => {
   
@@ -35,15 +36,15 @@ const SliderItem = ({ item, index, scrollX }: Props) => {
         {
           translateX: interpolate(
             scrollX.value,
-            [(index - 1) * width, index * width, (index + 1) * width],
-            [-width * 0.6, 0, width * 0.6],
+            [(index - 1) * 375, index * 375, (index + 1) * 375],
+            [-375 * 0.56, 0, 375 * 0.56], 
             Extrapolation.CLAMP
           ),
         },
         {
           scale: interpolate(
             scrollX.value,
-            [(index - 1) * width, index * width, (index + 1) * width],
+            [(index - 1) * 375, index * 375, (index + 1) * 375],
             [0.8, 1, 0.8],
             Extrapolation.CLAMP
           ),
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     gap: 10,
-    width: width,
+    width: 375,
   },
   image: {
     width: 168,
