@@ -47,8 +47,8 @@ export default function Home() {
           />
           <MaterialIcons name="search" size={24} color="#fff" />
         </View>
-          <Slider itemList={ImageSlider}/>
         </ScrollView>
+          <Slider itemList={ImageSlider}/>
       </SafeAreaView>
     </GestureHandlerRootView>
   );

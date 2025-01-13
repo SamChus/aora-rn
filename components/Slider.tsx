@@ -42,7 +42,7 @@ const Slider = ({ itemList }: Props) => {
 
   const onViewableItemsChanged = ({ viewableItems }: {viewableItems: ViewToken[]}) => {
     if (viewableItems[0].index !== undefined && viewableItems[0].index !== null) {
-      setPaginationIndex(viewableItems[0].index);
+      setPaginationIndex(viewableItems[0].index % itemList.length);
     }
 }
 
@@ -61,7 +61,7 @@ const Slider = ({ itemList }: Props) => {
     if (isAutoPlay === true) {
       interval.current = setInterval(() => {
         offset.value = offset.value + 375; //375 is the width of the screen 
-      }, 3000);
+      }, 5000);
     } else {
       clearInterval(interval.current);
     }
@@ -82,8 +82,9 @@ const Slider = ({ itemList }: Props) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={({ item, index }) => (
-          <SliderItem item={item} index={index} scrollX={scrollX} key={index}/>
+          <SliderItem item={item} index={index} scrollX={scrollX}/>
         )}
+        keyExtractor={(item, index) => `${item.id}-${index}`}
         onScroll={onScrollHandler}
         scrollEventThrottle={16}
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
