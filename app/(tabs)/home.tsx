@@ -18,37 +18,39 @@ import Slider from "@/components/Slider";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useSharedValue } from "react-native-reanimated";
 import { ImageSlider } from "@/constants/data";
-
+import Post from "@/components/Post";
 
 // const width = Dimensions.get("window").width;
-
-
 
 export default function Home() {
   return (
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaView>
-      <ScrollView>
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.welcomeText}>Welcome back</Text>
-            <Text style={styles.username}>John Doe</Text>
+        <ScrollView>
+          <View style={styles.header}>
+            <View>
+              <Text style={styles.welcomeText}>Welcome back</Text>
+              <Text style={styles.username}>John Doe</Text>
+            </View>
+            <Image
+              source={require("@/assets/icons/logo-icon.png")}
+              style={styles.logo}
+            />
           </View>
-          <Image
-            source={require("@/assets/icons/logo-icon.png")}
-            style={styles.logo}
-          />
-        </View>
-        <View style={styles.inputField}>
-          <TextInput
-            style={styles.input}
-            placeholder="Search for products"
-            placeholderTextColor="#fff"
-          />
-          <MaterialIcons name="search" size={24} color="#fff" />
-        </View>
+          <View style={styles.inputField}>
+            <TextInput
+              style={styles.input}
+              placeholder="Search for products"
+              placeholderTextColor="#fff"
+            />
+            <MaterialIcons name="search" size={24} color="#fff" />
+          </View>
+          <Text style={styles.sliderText}>Trending Videos</Text>
+          <Slider itemList={ImageSlider} />
+          <Post />
+          <Post />
+          <Post />
         </ScrollView>
-          <Slider itemList={ImageSlider}/>
       </SafeAreaView>
     </GestureHandlerRootView>
   );
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     backgroundColor: "#161622",
+    paddingBottom: 20,
   },
   header: {
     flexDirection: "row",
@@ -74,6 +77,15 @@ const styles = StyleSheet.create({
     color: "#CDCDE0",
     fontWeight: "bold",
     fontFamily: "monospace",
+  },
+  sliderText: {
+    fontSize: 16,
+    color: "#CDCDE0",
+    fontWeight: 600,
+    fontFamily: "Poppins",
+    paddingHorizontal: 25,
+    paddingVertical: 10,
+    marginTop: 20,
   },
   username: {
     fontSize: 24,
