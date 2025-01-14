@@ -48,7 +48,13 @@ import * as SplashScreen from 'expo-splash-screen';
 
 export default function Layout() {
   const [loaded] = useFonts({
-    Poppins: require("@/assets/fonts/Poppins-Regular.ttf"),
+    PoppinsRegular: require("@/assets/fonts/Poppins-Regular.ttf"),
+    PoppinsBold: require("@/assets/fonts/Poppins-Bold.ttf"),
+    PoppinsSemiBold: require("@/assets/fonts/Poppins-SemiBold.ttf"),
+    PoppinsMedium: require("@/assets/fonts/Poppins-Medium.ttf"),
+    PoppinsLight: require("@/assets/fonts/Poppins-Light.ttf"),
+    PoppinsThin: require("@/assets/fonts/Poppins-Thin.ttf"),
+
   });
   useEffect(() => {
     if (loaded) {
