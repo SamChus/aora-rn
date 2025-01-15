@@ -30,7 +30,7 @@ export default function Home() {
           <View style={styles.header}>
             <View>
               <Text style={styles.welcomeText}>Welcome back</Text>
-              <Text style={styles.username}>John Doe</Text>
+              <Text style={styles.username}>Samuel Chukwuma</Text>
             </View>
             <Image
               source={require("@/assets/icons/logo-icon.png")}
@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
   welcomeText: {
     fontSize: 14,
     color: "#CDCDE0",
-    fontWeight: "bold",
-    fontFamily: "monospace",
+    fontWeight: 600,
+    fontFamily: "Poppins",
   },
   sliderText: {
     fontSize: 16,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   username: {
     fontSize: 24,
     color: "#fff",
-    fontWeight: "bold",
+    fontWeight: 600,
     marginTop: 3,
     letterSpacing: -1,
     fontFamily: "Poppins",
@@ -115,6 +115,8 @@ const styles = StyleSheet.create({
   },
   input: {
     color: "#fff",
+    width: "90%",
+    fontWeight: 400,
     // padding: 17,
   },
 });
