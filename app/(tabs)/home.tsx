@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#161622",
     paddingBottom: 20,
+    paddingTop: 20,
   },
   header: {
     flexDirection: "row",

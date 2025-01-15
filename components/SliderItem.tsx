@@ -37,7 +37,7 @@ const SliderItem = ({ item, index, scrollX }: Props) => {
           translateX: interpolate(
             scrollX.value,
             [(index - 1) * 375, index * 375, (index + 1) * 375],
-            [-375 * 0.56, 0, 375 * 0.56], 
+            [-375 * 0.50, 0, 375 * 0.50], 
             Extrapolation.CLAMP
           ),
         },
