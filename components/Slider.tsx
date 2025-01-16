@@ -1,6 +1,6 @@
-import { View, Text, FlatList, ViewToken, Dimensions } from "react-native";
+import { View,ViewToken, Dimensions } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
-import { ImageSlider, ImageSliderProps } from "@/constants/data";
+import { ImageSliderProps } from "@/constants/data";
 import SliderItem from "./SliderItem";
 import Animated, {
   scrollTo,
@@ -71,7 +71,7 @@ const Slider = ({ itemList }: Props) => {
     return () => {
       clearInterval(interval.current);
     };
-  }, [isAutoPlay, offset, width]);
+  }, [isAutoPlay, offset]);
 
   useDerivedValue(() => {
     scrollTo(ref, offset.value, 0, true);

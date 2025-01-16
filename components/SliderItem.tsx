@@ -11,7 +11,6 @@ import { ImageSliderProps } from "@/constants/data";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import Animated, {
-  Extrapolate,
   Extrapolation,
   interpolate,
   SharedValue,
@@ -24,7 +23,7 @@ type Props = {
   scrollX: SharedValue<number>;
 };
 
-const { width } = Dimensions.get("screen");
+// const { width } = Dimensions.get("screen");
 //using width as 375 here, but you use the actual width of the screen
 
 

@@ -1,7 +1,6 @@
 import { Text } from "react-native";
 import {
   TextInput,
-  Button,
   StyleSheet,
   SafeAreaView,
   View,

@@ -5,14 +5,11 @@ import {
   SafeAreaView,
   Image,
   TextInput,
-  TouchableWithoutFeedback,
-  Keyboard,
-  Dimensions,
+  // Dimensions,
   ScrollView,
 } from "react-native";
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
-// import Carousel from "react-native-reanimated-carousel";
 import Slider from "@/components/Slider";
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
